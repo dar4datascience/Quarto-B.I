@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>BI-Quarto - Convenience Store</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">BI-Quarto</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./automation_solutions.html" rel="" target="">
+ <span class="menu-text">Automation Solutions</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-custom-solutions" role="button" data-bs-toggle="dropdown" aria-expanded="false" rel="" target="">
+ <span class="menu-text">Custom Solutions</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-custom-solutions">    
+        <li>
+    <a class="dropdown-item" href="./convenience_store.html" rel="" target="">
+ <span class="dropdown-text">Convenience Store</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./d2c_avocado.html" rel="" target="">
+ <span class="dropdown-text">D2C Avocado Business</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#legacy-data-migration-and-cleansing" id="toc-legacy-data-migration-and-cleansing" class="nav-link active" data-scroll-target="#legacy-data-migration-and-cleansing">1. <strong>Legacy Data Migration and Cleansing</strong></a></li>
+  <li><a href="#digital-customer-database-creation" id="toc-digital-customer-database-creation" class="nav-link" data-scroll-target="#digital-customer-database-creation">2. <strong>Digital Customer Database Creation</strong></a></li>
+  <li><a href="#inventory-management-system" id="toc-inventory-management-system" class="nav-link" data-scroll-target="#inventory-management-system">3. <strong>Inventory Management System</strong></a></li>
+  <li><a href="#data-driven-demand-forecasting" id="toc-data-driven-demand-forecasting" class="nav-link" data-scroll-target="#data-driven-demand-forecasting">4. <strong>Data-Driven Demand Forecasting</strong></a></li>
+  <li><a href="#energy-consumption-analytics" id="toc-energy-consumption-analytics" class="nav-link" data-scroll-target="#energy-consumption-analytics">5. <strong>Energy Consumption Analytics</strong></a></li>
+  <li><a href="#customer-transaction-analytics" id="toc-customer-transaction-analytics" class="nav-link" data-scroll-target="#customer-transaction-analytics">6. <strong>Customer Transaction Analytics</strong></a></li>
+  <li><a href="#automated-financial-reporting" id="toc-automated-financial-reporting" class="nav-link" data-scroll-target="#automated-financial-reporting">7. <strong>Automated Financial Reporting</strong></a></li>
+  <li><a href="#customer-loyalty-program-setup" id="toc-customer-loyalty-program-setup" class="nav-link" data-scroll-target="#customer-loyalty-program-setup">8. <strong>Customer Loyalty Program Setup</strong></a></li>
+  <li><a href="#security-incident-logging-and-analysis" id="toc-security-incident-logging-and-analysis" class="nav-link" data-scroll-target="#security-incident-logging-and-analysis">9. <strong>Security Incident Logging and Analysis</strong></a></li>
+  <li><a href="#data-analytics-dashboard" id="toc-data-analytics-dashboard" class="nav-link" data-scroll-target="#data-analytics-dashboard">10. <strong>Data Analytics Dashboard</strong></a></li>
+  <li><a href="#supplier-negotiation-and-relationship-management" id="toc-supplier-negotiation-and-relationship-management" class="nav-link" data-scroll-target="#supplier-negotiation-and-relationship-management">11. <strong>Supplier Negotiation and Relationship Management</strong></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Convenience Store</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="legacy-data-migration-and-cleansing" class="level2">
+<h2 class="anchored" data-anchor-id="legacy-data-migration-and-cleansing">1. <strong>Legacy Data Migration and Cleansing</strong></h2>
+<p><em>Description:</em> Facilitate the smooth transition of existing paper and legacy data into a digital format. This involves migrating historical records, cleaning and organizing data, ensuring accuracy, and establishing a structured digital database for easy access and analysis.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">   graph LR
+      A[Paper Records] --&gt;|Digitization| B[Digital Format]
+      B --&gt;|Organization| C[Cleaned Data]
+      C --&gt;|Structuring| D[Structured Database]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="digital-customer-database-creation" class="level2">
+<h2 class="anchored" data-anchor-id="digital-customer-database-creation">2. <strong>Digital Customer Database Creation</strong></h2>
+<p><em>Description:</em> Build a comprehensive digital customer database by digitizing existing customer records. This solution enables the store to track customer preferences, purchase history, and demographics, laying the foundation for targeted marketing and personalized service.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+   A[Customer Records] --&gt;|Digitization| B[Digital Database]
+   B --&gt;|Tracking| C[Customer Preferences]
+   C --&gt;|Analysis| D[Purchase History &amp; Demographics]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="inventory-management-system" class="level2">
+<h2 class="anchored" data-anchor-id="inventory-management-system">3. <strong>Inventory Management System</strong></h2>
+<p><em>Description:</em> Utilize an advanced inventory management system to monitor stock levels, automate reordering processes, and minimize overstock or stockouts. This solution enhances efficiency, reduces manual errors, and improves overall supply chain management.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+   A[Stock Levels] --&gt;|Monitoring| B[Automated Reordering]
+   B --&gt;|Optimization| C[Efficient Supply Chain]
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-driven-demand-forecasting" class="level2">
+<h2 class="anchored" data-anchor-id="data-driven-demand-forecasting">4. <strong>Data-Driven Demand Forecasting</strong></h2>
+<p><em>Description:</em> Utilize advanced analytics to predict future demand for products based on historical sales data, seasonal trends, and other relevant factors. This solution helps optimize inventory levels, reduce stockouts, and improve overall supply chain management.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+   A[Historical Sales Data] --&gt;|Analysis| B[Data-Driven Forecasting]
+   B --&gt;|Optimization| C[Inventory Level Optimization]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="energy-consumption-analytics" class="level2">
+<h2 class="anchored" data-anchor-id="energy-consumption-analytics">5. <strong>Energy Consumption Analytics</strong></h2>
+<p><em>Description:</em> Implement tools for analyzing energy consumption within the convenience store. This data-driven approach helps identify opportunities for energy savings, optimize equipment usage, and reduce utility costs without compromising operational efficiency.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+   A[Energy Consumption] --&gt;|Analysis| B[Identify Savings Opportunities]
+   B --&gt;|Optimization| C[Efficient Equipment Usage]
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="customer-transaction-analytics" class="level2">
+<h2 class="anchored" data-anchor-id="customer-transaction-analytics">6. <strong>Customer Transaction Analytics</strong></h2>
+<p><em>Description:</em> Analyze transaction data to gain insights into customer behavior, popular purchasing times, and preferred products. This solution aids in making informed decisions on promotions, pricing, and inventory management to enhance the customer experience.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+   A[Transaction Data] --&gt;|Analysis| B[Customer Behavior Insights]
+   B --&gt;|Decision-Making| C[Informed Promotions &amp; Pricing]
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="automated-financial-reporting" class="level2">
+<h2 class="anchored" data-anchor-id="automated-financial-reporting">7. <strong>Automated Financial Reporting</strong></h2>
+<p><em>Description:</em> Streamline financial reporting processes by implementing automated tools. This solution ensures timely and accurate financial statements, helping the business owner make informed decisions and maintain financial transparency.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+   A[Financial Data] --&gt;|Automation| B[Automated Reporting]
+   B --&gt;|Decision Support| C[Informed Decision-Making]
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="customer-loyalty-program-setup" class="level2">
+<h2 class="anchored" data-anchor-id="customer-loyalty-program-setup">8. <strong>Customer Loyalty Program Setup</strong></h2>
+<p><em>Description:</em> Assist in setting up and managing a customer loyalty program. While not a mobile app, a card-based or phone number-based loyalty program can be established, providing incentives for repeat business and automating the reward redemption process.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+   A[Loyalty Program Setup] --&gt;|Card/Phone-Based| B[Customer Incentives]
+   B --&gt;|Automation| C[Automated Reward Redemption]
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="security-incident-logging-and-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="security-incident-logging-and-analysis">9. <strong>Security Incident Logging and Analysis</strong></h2>
+<p><em>Description:</em> Digitize security incident logs and implement analytics for real-time monitoring. This solution enhances security by identifying patterns or anomalies, allowing the store to proactively address security concerns and mitigate risks.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+   A[Security Incident Logs] --&gt;|Digitization| B[Digital Logs]
+   B --&gt;|Analysis| C[Real-time Monitoring]
+   C --&gt;|Proactive Measures| D[Security Enhancements]
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-analytics-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="data-analytics-dashboard">10. <strong>Data Analytics Dashboard</strong></h2>
+<p><em>Description:</em> Develop a customized data analytics dashboard that visualizes key performance indicators (KPIs) such as sales trends, popular products, and customer demographics. This empowers the business owner with actionable insights for strategic decision-making.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+   A[Raw Data] --&gt;|Visualization| B[Analytics Dashboard]
+   B --&gt;|Insights| C[Actionable KPIs]
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="supplier-negotiation-and-relationship-management" class="level2">
+<h2 class="anchored" data-anchor-id="supplier-negotiation-and-relationship-management">11. <strong>Supplier Negotiation and Relationship Management</strong></h2>
+<p><em>Description:</em> Provide guidance on negotiating favorable terms with suppliers and establishing efficient communication channels. Implementing a vendor management system can automate order processes, track supplier performance, and ensure timely deliveries.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+   A[Supplier Negotiation] --&gt;|Communication| B[Efficient Channels]
+   B --&gt;|Automation| C[Automated Order Processes]
+   C --&gt;|Performance Tracking| D[Ensure Timely Deliveries]
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

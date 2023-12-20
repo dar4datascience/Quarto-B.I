@@ -1,0 +1,29 @@
+project:
+  type: website
+
+website:
+  title: "BI-Quarto"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: automation_solutions.qmd
+        text: "Automation Solutions"
+      - text: "Custom Solutions"
+        menu:
+          - convenience_store.qmd
+          - d2c_avocado.qmd
+
+
+format:
+  html:
+    lang: es
+    css: styles.css
+    toc: true
+
+
+theme:
+  light: zephyr
+  dark: cyborg
+
+

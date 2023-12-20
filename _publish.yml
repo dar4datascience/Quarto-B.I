@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: c0c56061-10a2-4321-8f74-ad6f42221072
+      url: 'https://dar4ds.quarto.pub/bi-quarto'
