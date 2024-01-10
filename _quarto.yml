@@ -13,6 +13,10 @@ website:
         menu:
           - convenience_store.qmd
           - d2c_avocado.qmd
+      - text: "Shinylive Python"
+        href: shinylive.qmd
+      - text: "Quarto WebR"
+        href: quarto_webr.qmd
 
 
 format:
