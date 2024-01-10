@@ -137,7 +137,11 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#embedded-shiny-application" id="toc-embedded-shiny-application" class="nav-link active" data-scroll-target="#embedded-shiny-application">Embedded Shiny application</a></li>
-  <li><a href="#editor-with-app" id="toc-editor-with-app" class="nav-link" data-scroll-target="#editor-with-app">Editor with app</a></li>
+  <li><a href="#editor-with-app" id="toc-editor-with-app" class="nav-link" data-scroll-target="#editor-with-app">Editor with app</a>
+  <ul class="collapse">
+  <li><a href="#vertically-stacked-components" id="toc-vertically-stacked-components" class="nav-link" data-scroll-target="#vertically-stacked-components">Vertically stacked components</a></li>
+  <li><a href="#multiple-files" id="toc-multiple-files" class="nav-link" data-scroll-target="#multiple-files">Multiple files</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -161,8 +165,8 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="embedded-shiny-application" class="level3">
-<h3 class="anchored" data-anchor-id="embedded-shiny-application">Embedded Shiny application</h3>
+<section id="embedded-shiny-application" class="level2">
+<h2 class="anchored" data-anchor-id="embedded-shiny-application">Embedded Shiny application</h2>
 <p>To display a running Shiny app, use a code block with <code>{shinylive-python}</code>.</p>
 <pre class="shinylive-python" data-engine="python"><code>#| standalone: true
 #| viewerHeight: 420
@@ -204,8 +208,8 @@ app = App(app_ui, server)
 <p>Note that the code block currently must have <code>#| standalone: true</code>, which indicates that the code represents a complete Shiny application, as opposed to one which has parts spread throughout the document (which will be supported in the future).</p>
 <p>The example above also uses <code>#| viewerHeight: 420</code> to set the height of the viewer to 420 pixels.</p>
 </section>
-<section id="editor-with-app" class="level3 page-columns page-full">
-<h3 class="anchored" data-anchor-id="editor-with-app">Editor with app</h3>
+<section id="editor-with-app" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="editor-with-app">Editor with app</h2>
 <p>If you want to display an editor panel with along with the running application, use <code>#| components: [editor, viewer]</code>. Users will be able to use the editor to modify the code and re-run the application.</p>
 <div class="column-page-inset-right">
 <pre class="shinylive-python" data-engine="python"><code>#| standalone: true
@@ -228,8 +232,8 @@ app = App(app_ui, server)
 </code></pre>
 </div>
 <p>The default width in a Quarto document is somewhat narrow for showing the editor and viewer next to each other. It can be made wider with <a href="https://quarto.org/docs/authoring/article-layout.html">Quarto layout containers</a>. In the example above it uses <code>column-page-inset-right</code>.</p>
-<section id="vertically-stacked-components" class="level4">
-<h4 class="anchored" data-anchor-id="vertically-stacked-components">Vertically stacked components</h4>
+<section id="vertically-stacked-components" class="level3">
+<h3 class="anchored" data-anchor-id="vertically-stacked-components">Vertically stacked components</h3>
 <p>To display the editor above the code, use <code>#| layout: vertical</code>.</p>
 <pre class="shinylive-python" data-engine="python"><code>#| standalone: true
 #| components: [editor, viewer]
@@ -252,8 +256,8 @@ def server(input, output, session):
 app = App(app_ui, server)
 </code></pre>
 </section>
-<section id="multiple-files" class="level4">
-<h4 class="anchored" data-anchor-id="multiple-files">Multiple files</h4>
+<section id="multiple-files" class="level3">
+<h3 class="anchored" data-anchor-id="multiple-files">Multiple files</h3>
 <p>For apps that have multiple files, you can mark the start of each file with <code>## file: filename.py</code>.</p>
 <p>Binary files can be used with <code>## type: binary</code>, and the file must be base64-encoded. This can be done with the <code>base64</code> command line tool.</p>
 <pre class="shinylive-python" data-engine="python"><code>#| standalone: true

@@ -6,7 +6,7 @@ filters:
 ---
 
 
-### Embedded Shiny application
+## Embedded Shiny application
 
 To display a running Shiny app, use a code block with `{shinylive-python}`.
 
@@ -55,7 +55,7 @@ Note that the code block currently must have `#| standalone: true`, which indica
 The example above also uses `#| viewerHeight: 420` to set the height of the viewer to 420 pixels.
 
 
-### Editor with app
+## Editor with app
 
 If you want to display an editor panel with along with the running application, use `#| components: [editor, viewer]`. Users will be able to use the editor to modify the code and re-run the application.
 
@@ -85,7 +85,7 @@ app = App(app_ui, server)
 The default width in a Quarto document is somewhat narrow for showing the editor and viewer next to each other. It can be made wider with [Quarto layout containers](https://quarto.org/docs/authoring/article-layout.html). In the example above it uses `column-page-inset-right`.
 
 
-#### Vertically stacked components
+### Vertically stacked components
 
 To display the editor above the code, use `#| layout: vertical`.
 
@@ -113,7 +113,7 @@ app = App(app_ui, server)
 ```
 
 
-#### Multiple files
+### Multiple files
 
 For apps that have multiple files, you can mark the start of each file with `## file: filename.py`.
 
