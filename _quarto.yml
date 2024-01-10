@@ -21,6 +21,7 @@ website:
 
 format:
   html:
+    smooth-scroll: true
     lang: es
     css: styles.css
     toc: true
